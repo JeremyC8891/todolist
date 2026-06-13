@@ -111,5 +111,5 @@ const requestListener = function (req, res) {
 
 const server = http.createServer(requestListener);  
 
-server.listen(3005);
-console.log('Server running at http://localhost:3005/');
+server.listen(process.env.PORT || 3005);
+console.log('Server running at http://localhost:' + (process.env.PORT || 3005) + '/');
